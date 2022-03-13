@@ -7,11 +7,11 @@ def main(data,modelName,plotName,eta,epochs):
     X,y=prepare_data(df_OR)
     ETA=0.1
     EPOCHS=10
-    model_OR=Perceptron(eta=ETA,epochs=EPOCHS)
-    model_OR.fit(X,y)
-    _=model_OR.total_loss()
-    model_OR.save(filename=modelName,model_dir="model")
-    save_plot(df_OR,model_OR,filename=plotName)
+    model=Perceptron(eta=ETA,epochs=EPOCHS)
+    model.fit(X,y)
+    _=model.total_loss()
+    model.save(filename=modelName,model_dir="model")
+    save_plot(df_OR,model,filename=plotName)
 
 
 if __name__=="__main__":
